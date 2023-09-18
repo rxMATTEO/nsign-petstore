@@ -1,5 +1,3 @@
-import { Pet, Status } from '~/types/Pet/pet.d.ts';
-
 export const useRememberPetStore = defineStore('rememberPetStore', {
   state: () => {
     const petFromCookie = useCookie('rememberPet');
