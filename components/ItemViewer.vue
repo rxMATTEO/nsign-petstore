@@ -5,6 +5,8 @@ import { Pet } from '~/types/Pet/pet';
 type ItemViewerProps = {
   quantity: number,
   items: Pet[],
+  navigateOnClick?: boolean,
+  onClick?: (item: Pet) => void
 }
 const props = defineProps<ItemViewerProps>();
 
@@ -20,7 +22,7 @@ const slicedByQuantityItems = computed(() => {
         v-for="item in slicedByQuantityItems"
         class="bg-blue-400 p-5 rounded-xl cursor-pointer"
       >
-        <NuxtLink :to="'/pet/' + item.id">
+        <NuxtLink v-if="navigateOnClick" :to="'/pet/' + item.id">
           <div>
             <span>Имя животного: </span>
             <div>
@@ -28,6 +30,14 @@ const slicedByQuantityItems = computed(() => {
             </div>
           </div>
         </NuxtLink>
+        <div v-else @click="onClick(item)">
+          <div>
+            <span>Имя животного: </span>
+            <div>
+              {{ item.name }}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

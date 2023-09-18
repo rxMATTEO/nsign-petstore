@@ -23,7 +23,15 @@ export const usePetStore = defineStore('petStore', {
 
     async fetchPetById (id: number): Promise<Pet> {
       const { public: { API_URL } } = useRuntimeConfig();
-      return await $fetch(`${API_URL}/pet/${id}`);
+      const result =  ($fetch(`${API_URL}/pet/${id}`)).catch( error => {
+        throw createError({
+          statusCode: 404,
+          statusMessage: 'Api error',
+          message: 'Api error',
+          fatal: true
+        });
+      } );
+      return await result as Pet;
     }
   }
 });

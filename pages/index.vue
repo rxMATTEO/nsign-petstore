@@ -19,7 +19,7 @@ async function updatePets (status: Status) {
       <h1 class="text-3xl font-bold m-5">
         Витрина животных
       </h1>
-      <ItemViewer :items="pets" :quantity="5" />
+      <ItemViewer :navigate-on-click="true" :items="pets" :quantity="5" />
     </div>
   </div>
 </template>
