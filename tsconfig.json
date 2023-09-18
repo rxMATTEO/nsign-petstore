@@ -16,8 +16,8 @@
     "allowImportingTsExtensions": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
+      "~/*": [
+        "./*"
       ]
     },
     "types": [
@@ -25,12 +25,13 @@
       "@nuxt/typescript-build",
       "@types/node",
       "./.nuxt/types/imports.d.ts",
-      "./.nuxt/types/nitro-imports.d.ts"
+      "./.nuxt/types/nitro-imports.d.ts",
+      "types"
     ],
-    "typeRoots": ["./.nuxt/types/imports.d.ts", "./.nuxt/types/nitro-imports.d.ts"]
+    "typeRoots": ["./.nuxt/types/imports.d.ts", "./.nuxt/types/nitro-imports.d.ts", "types"]
   },
   "exclude": [
-    "node_modules",
+    "node_modules"
   ],
   "extends": "./.nuxt/tsconfig.json"
 }

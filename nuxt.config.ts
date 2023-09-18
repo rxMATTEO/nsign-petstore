@@ -1,7 +1,7 @@
-import { NuxtConfig } from "nuxt/config";
+import { NuxtConfig } from 'nuxt/config';
 
 const nuxtConfig: NuxtConfig = {
-  devtools: { enabled: true, },
+  devtools: { enabled: true },
   buildModules: ['@nuxt/typescript-build'],
   build: {
     // @ts-ignore
@@ -16,7 +16,7 @@ const nuxtConfig: NuxtConfig = {
   },
   modules: [
     '@nuxtjs/tailwindcss',
-    '@pinia/nuxt',
+    '@pinia/nuxt'
   ],
   pinia: {
     autoImports: ['defineStore',
@@ -43,9 +43,9 @@ const nuxtConfig: NuxtConfig = {
       ],
       htmlAttrs: {
         lang: 'en'
-      },
+      }
     }
-  },
+  }
 };
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
