@@ -1,3 +1,21 @@
+# Petstore test case for Nsign
+
+It's application for your test exercise. Hope you'll enjoy it <3.
+
+# Docker start
+
+```bash
+docker compose up
+```
+
+Or
+
+```bash
+docker build -t nsign .
+docker run -it -p 3000:3000 nsign
+```
+
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
