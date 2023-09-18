@@ -42,6 +42,9 @@ function onModalClose(){
       </div>
     </div>
     <div>
+      <div class="my-5">
+        <NuxtLink to="/" class="text-blue-400">На главную</NuxtLink>
+      </div>
       Ранее просмотренное животное: {{ rememberPetStore.getRememberPet }}
     </div>
     <FullScreenModal :is-visible="isFullscreenModalVisible">
