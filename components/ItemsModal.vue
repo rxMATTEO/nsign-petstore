@@ -14,13 +14,14 @@ const emits = defineEmits(['itemClick']);
 </script>
 
 <template>
-  <button class="bg-blue-300 p-3 rounded-xl right-0 absolute" @click="isModalVisible = !isModalVisible">Открыть похожие</button>
+  <button class="bg-blue-300 p-3 rounded-xl right-0 absolute" @click="isModalVisible = !isModalVisible">
+    Открыть похожие
+  </button>
   <div class="absolute right-52">
-  <div class="relative" v-if="isModalVisible">
-    <ItemViewer :quantity="quantity" :items="items" :on-click="(item: Pet) => emits('itemClick', item)" />
+    <div v-if="isModalVisible" class="relative">
+      <ItemViewer :quantity="quantity" :items="items" :on-click="(item: Pet) => emits('itemClick', item)" />
+    </div>
   </div>
-  </div>
-
 </template>
 
 <style scoped>

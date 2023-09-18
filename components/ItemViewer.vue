@@ -20,6 +20,7 @@ const slicedByQuantityItems = computed(() => {
     <div class="flex gap-5 justify-center flex-wrap">
       <div
         v-for="item in slicedByQuantityItems"
+        :key="item.id"
         class="bg-blue-400 p-5 rounded-xl cursor-pointer"
       >
         <NuxtLink v-if="navigateOnClick" :to="'/pet/' + item.id">

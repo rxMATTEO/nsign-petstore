@@ -12,13 +12,13 @@ const pet = await petStore.fetchPetById(id);
 
 const sameCategoryPets = await petStore.fetchPetByStatus(pet.status);
 
-const clickedItem: Ref<Pet> = ref(null);
+const clickedItem: Ref<Pet> = ref({} as Pet);
 const isFullscreenModalVisible = ref(false);
 
 let _rememberPet = '';
 const rememberPet = computed({
   get: () => clickedItem.value?.name || '',
-  set: (value: string) => _rememberPet = value
+  set: (value: string) => { _rememberPet = value; }
 });
 
 const rememberPetStore = useRememberPetStore();
