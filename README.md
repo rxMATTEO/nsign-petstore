@@ -5,6 +5,7 @@ It's application for your test exercise. Hope you'll enjoy it <3.
 # Docker start
 
 ```bash
+docker compose build
 docker compose up
 ```
 

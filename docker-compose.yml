@@ -1,8 +1,8 @@
 version: '3.3'
 services:
-  my-nuxt-app:
+  nsign-petstore-nuxt:
     build: .
-    container_name: nsign-petstore
+    container_name: nsign-petstore-nuxt
     restart: unless-stopped
     ports:
       - "3000:3000"
