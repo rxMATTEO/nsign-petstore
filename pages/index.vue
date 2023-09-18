@@ -16,6 +16,9 @@ async function updatePets (status: Status) {
   <div>
     <StatusSelect @change="updatePets" />
     <div class="mt-10">
+      <h1 class="text-3xl font-bold m-5">
+        Витрина животных
+      </h1>
       <ItemViewer :items="pets" :quantity="5" />
     </div>
   </div>

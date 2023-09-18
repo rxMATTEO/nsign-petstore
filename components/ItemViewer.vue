@@ -15,10 +15,7 @@ const slicedByQuantityItems = computed(() => {
 
 <template>
   <div>
-    <h1 class="text-3xl font-bold m-5">
-      Витрина животных
-    </h1>
-    <div class="flex gap-5 justify-center">
+    <div class="flex gap-5 justify-center flex-wrap">
       <div
         v-for="item in slicedByQuantityItems"
         class="bg-blue-400 p-5 rounded-xl cursor-pointer"
