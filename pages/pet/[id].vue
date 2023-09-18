@@ -9,8 +9,9 @@ const pet = await petStore.fetchPetById(id);
 
 <template>
   <div v-if="pet.id">
-    <div class="flex gap-5 justify-center">
-      {{ pet.name }}
+    <div class="flex gap-5 justify-center items-center">
+      <span class="text-3xl font-bold">Имя животного: </span>
+      <span class="align-middle">{{ pet.name }}</span>
     </div>
   </div>
 </template>
